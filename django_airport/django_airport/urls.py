@@ -19,6 +19,7 @@ router.registry.extend(info_banners_router.registry)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/chat/', include('chat.urls')),
     path('api/auth/', include('users.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
