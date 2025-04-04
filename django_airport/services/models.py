@@ -2,8 +2,10 @@ from django.db import models
 
 class Service(models.Model):
     SERVICE_TYPES = [
-        ('shop', 'Shop'),
-        ('cafe', 'Cafe'),
+        ('jewelry', 'Ювелирка'),
+        ('dutyfree', 'Duty-free'),
+        ('souvenirs', 'Сувениры'),
+        ('simcard', 'SIM-card'),
     ]
 
     name = models.CharField(max_length=100)
