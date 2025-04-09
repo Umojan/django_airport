@@ -19,3 +19,15 @@ class InfoBanner(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class InfoSection(models.Model):
+    title_ru = models.CharField(max_length=200)
+    title_en = models.CharField(max_length=200)
+    image = models.ImageField(upload_to="info_sections/")
+    content_ru = RichTextField()
+    content_en = RichTextField()
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.title_ru
