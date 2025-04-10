@@ -15,4 +15,4 @@ class InfoBannerSerializer(serializers.ModelSerializer):
 class InfoSectionSerializer(serializers.ModelSerializer):
     class Meta:
         model = InfoSection
-        fields = '__all__'
+        fields = ['id', 'title_ru', 'title_en', 'content_ru', 'content_en', 'image']
