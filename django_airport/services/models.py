@@ -14,6 +14,9 @@ class Service(models.Model):
     location = models.CharField(max_length=100)
     open_time = models.TimeField()
     close_time = models.TimeField()
+    
+    image = models.ImageField(upload_to='service_images/', blank=True, null=True)
+
 
     def __str__(self):
         return f"{self.name} ({self.get_service_type_display()})"
