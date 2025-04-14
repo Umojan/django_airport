@@ -20,7 +20,11 @@ class Service(models.Model):
     description_en = models.TextField("Описание (английский)", blank=True)
     description_ky = models.TextField("Описание (кыргызский)", blank=True)
 
-    location = models.CharField(max_length=100)
+    # Локации
+    location = models.CharField("Локация (русский)", max_length=100)
+    location_en = models.CharField("Локация (английский)", max_length=100, blank=True)
+    location_ky = models.CharField("Локация (кыргызский)", max_length=100, blank=True)
+
     open_time = models.TimeField()
     close_time = models.TimeField()
 
